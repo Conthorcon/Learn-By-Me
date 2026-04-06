@@ -30,5 +30,12 @@ def check():
     predictions = model("result/image6.png")
     predictions[0].show()
 
+def predict(path):
+    model = YOLO('runs/detect/my_yolo_model2/weights/best.pt') 
+
+    predictions = model(path)
+    return predictions
+
+
 if __name__ == "__main__":
     check()
